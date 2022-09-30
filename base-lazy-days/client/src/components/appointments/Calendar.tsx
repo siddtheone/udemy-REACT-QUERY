@@ -6,25 +6,20 @@ import {
   Heading,
   HStack,
   IconButton,
-} from '@chakra-ui/react';
-import dayjs from 'dayjs';
-import { ReactElement } from 'react';
-import { TiArrowLeftThick, TiArrowRightThick } from 'react-icons/ti';
+} from "@chakra-ui/react";
+import dayjs from "dayjs";
+import { ReactElement } from "react";
+import { TiArrowLeftThick, TiArrowRightThick } from "react-icons/ti";
 
-import { UserAppointments } from '../user/UserAppointments';
-import { DateBox } from './DateBox';
-import { useAppointments } from './hooks/useAppointments';
+import { UserAppointments } from "../user/UserAppointments";
+import { DateBox } from "./DateBox";
+import { useAppointments } from "./hooks/useAppointments";
 
 export function Calendar(): ReactElement {
   const currentDate = dayjs();
 
-  const {
-    appointments,
-    monthYear,
-    updateMonthYear,
-    showAll,
-    setShowAll,
-  } = useAppointments();
+  const { appointments, monthYear, updateMonthYear, showAll, setShowAll } =
+    useAppointments();
 
   return (
     <Box>
@@ -66,7 +61,7 @@ export function Calendar(): ReactElement {
         {[...Array(monthYear.lastDate)].map((_, i) =>
           i > 0 ? (
             <DateBox key={i} date={i + 1} appointments={appointments[i + 1]} />
-          ) : null,
+          ) : null
         )}
       </Grid>
       <UserAppointments />

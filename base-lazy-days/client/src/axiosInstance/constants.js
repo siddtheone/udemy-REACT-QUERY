@@ -1,2 +1,2 @@
-export const baseUrl = 'http://localhost:3030';
+export const baseUrl = "https://z3f4lo-3030.preview.csb.app";
 export const baseImageUrl = `${baseUrl}/images`;

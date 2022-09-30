@@ -1,6 +1,6 @@
-import { Request, Response } from 'express';
+import { Request, Response } from "express";
 
-import db from '../db-func';
+import db from "../db-func";
 
 export async function get(req: Request, res: Response): Promise<Response> {
   try {
